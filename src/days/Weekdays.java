@@ -9,15 +9,30 @@ package days;
  * @author sivagamasrinivasan
  */
 
-public class Weekdays {
+
     enum DayOfWeek {
-        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    MONDAY("Monday"),
+    TUESDAY("Tuesday"),
+    WEDNESDAY("Wednesday"),
+    THURSDAY("Thursday"),
+    FRIDAY("Friday"),
+    SATURDAY("Saturday"),
+    SUNDAY("Sunday");
+
+    private final String name;
+
+    DayOfWeek(String name) {
+        this.name = name;
     }
 
-    public void nameOfDay(int dayNumber) {
-        DayOfWeek day = DayOfWeek.values()[dayNumber - 1];
-        System.out.println(day);
+    public String getName() {
+        return name;
     }
 }
 
+public class Weekdays {
+    public void nameOfDay(DayOfWeek day) {
+        System.out.println(day.getName());
+    }
+}
 

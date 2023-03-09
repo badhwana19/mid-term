@@ -23,11 +23,10 @@ public class Days {
      */
     public static void main(String[] args) {
          
-    Scanner in = new Scanner(System.in);
-        System.out.println("Enter the day number (1-7) in integer");
-        int dayNumber = in.nextInt();
-        Weekdays t = new Weekdays();
-        t.nameOfDay(dayNumber);
+        Weekdays weekdays = new Weekdays();
+        for (DayOfWeek day : DayOfWeek.values()) {
+            weekdays.nameOfDay(day);
+        }
     }
 }
     
